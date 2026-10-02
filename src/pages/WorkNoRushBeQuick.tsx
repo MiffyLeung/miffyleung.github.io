@@ -159,6 +159,26 @@ export function WorkNoRushBeQuick() {
                 and a visible record of a small achievement.
               </figcaption>
             </figure>
+            <p>
+              Challenge mode gives that practice a different rhythm. Typing
+              moves the train along the route, while station prompts, speed and
+              the frustration meter bring the journey into the same screen.
+              The focus shifts from exploring sounds to keeping the ride moving.
+            </p>
+            <figure className="study-figure">
+              <img
+                src="/assets/nrbq-challenge-dark.png"
+                alt="Dark-mode Challenge gameplay on the East Rail route, with a train travelling from Lo Wu towards Sheung Shui, a frustration meter, station prompt, typing speed and on-screen game keyboard."
+                width="639"
+                height="783"
+                loading="lazy"
+              />
+              <figcaption>
+                Challenge mode with the game keyboard. The route, station
+                prompt and live feedback turn typing practice into a moving
+                journey. Shown during a demonstration play session.
+              </figcaption>
+            </figure>
           </section>
           <section className="study-section" id="scope">
             <p className="study-label">02 / FINDING THE MVP</p>
