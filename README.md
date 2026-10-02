@@ -12,7 +12,7 @@ This folder is connected to `MiffyLeung/miffyleung.github.io`. GitHub Pages publ
 - `about/index.html`: biography and professional journey.
 - `resume/index.html`: résumé, including print / save PDF support.
 - `assets/site.css` and `assets/site.js`: shared styles and motion.
-- `assets/`: original project images and the new abstract homepage illustration.
+- `assets/`: original project images and shared site files.
 - `miffy-work-first-portfolio.html`: the untouched original portfolio, preserved as a reference.
 
 All routes are ordinary folders with an `index.html`, so direct links and refreshes work on GitHub Pages without a router service.
@@ -33,6 +33,6 @@ Commit your edits and push `main` to `origin`. GitHub Pages will publish them au
 
 ## Motion and access
 
-The site respects the system's reduced-motion preference and the reader's Motion switch. Motion uses brief entrance gestures, artwork interaction and supported browser page transitions. Content and route links remain accessible without JavaScript.
+The site respects the system's reduced-motion preference and the reader's Motion switch. The original fine looping SVG illustration is preserved, and pauses when out of view or when the tab is hidden. Other motion uses brief entrance gestures and supported browser page transitions. Content and route links remain accessible without JavaScript.
 
 Design direction: existing paper, rust and serif identity, refined with editorial composition and restrained tactile motion. Motion guidance references https://github.com/iart-ai/motion-design-skills.

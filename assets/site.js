@@ -12,7 +12,7 @@ function syncMotion(){
  $('#motion-label').textContent=off?'Motion off':'Motion on';
  $('#motion-toggle').setAttribute('aria-pressed',String(!off));
  $('#motion-toggle').setAttribute('aria-label',off?'Turn decorative motion on':'Turn decorative motion off');
- if(off){document.getAnimations().forEach(a=>a.finish());const art=$('.perspectives img');if(art)art.style.transform='none'}
+ if(off){document.getAnimations().forEach(a=>a.finish())}
 }
 $('#motion-toggle').addEventListener('click',()=>{manualMotion=!manualMotion;try{localStorage.setItem('portfolio-motion',manualMotion?'off':'on')}catch(_){}syncMotion()});
 media.addEventListener('change',syncMotion);syncMotion();
@@ -40,20 +40,16 @@ if('IntersectionObserver' in window){
  },{rootMargin:'-18% 0px -50% 0px',threshold:[0,.25,.5]});
  toc.forEach(a=>{const section=document.getElementById(a.hash.slice(1));if(section)chapter.observe(section)});
 }else reveals.forEach(e=>e.classList.add('is-in-view'));
-// One opening gesture. No continuous looping or scroll hijacking.
+// A brief opening gesture complements the original living diagram below.
 if(!reduced()){
  $$('.hero-inner,.perspectives').forEach((e,i)=>e.animate([{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'none'}],{duration:850,delay:i*100,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'}));
-}
-const sculpture=$('.perspectives img');
-if(sculpture&&matchMedia('(hover: hover) and (pointer: fine)').matches){
- sculpture.style.transition='transform 700ms cubic-bezier(.22,1,.36,1)';
- sculpture.parentElement.addEventListener('pointermove',e=>{if(reduced())return;const r=sculpture.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;sculpture.style.transform=`translate(${x*10}px,${y*8}px) rotate(${x*2}deg)`});
- sculpture.parentElement.addEventListener('pointerleave',()=>sculpture.style.transform='none');
 }
 // The biography map follows the paragraph in view; reading never waits for animation.
 if($('[data-atlas-node]')){
  const entries=$$('[data-journey-step]');
+ let lastIndex=-1;
  const select=index=>{
+  if(index===lastIndex)return;lastIndex=index;
   entries.forEach((e,i)=>e.classList.toggle('is-current',i===index));
   $$('[data-atlas-node]').forEach(e=>{const n=Number(e.dataset.atlasNode);e.classList.toggle('has-context',n<=index);e.classList.toggle('is-current',n===index)});
   $$('[data-atlas-edge]').forEach(e=>e.classList.toggle('has-context',Number(e.dataset.atlasEdge)<=index));
@@ -61,7 +57,12 @@ if($('[data-atlas-node]')){
   $('#atlas-current').textContent=entries[index].querySelector('h3').textContent;
  };
  select(0);
- if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>{const e=es.find(e=>e.isIntersecting);if(e)select(Number(e.target.dataset.journeyStep))},{rootMargin:'-25% 0px -40% 0px'});entries.forEach(e=>io.observe(e))}
+ let atlasVisible=true,atlasScheduled=false;
+ function updateAtlas(){atlasScheduled=false;if(!atlasVisible)return;let nearest=0,distance=Infinity;entries.forEach((entry,i)=>{const r=entry.getBoundingClientRect(),d=Math.abs(r.top+r.height*.4-innerHeight*.52);if(d<distance){distance=d;nearest=i}});select(nearest)}
+ function scheduleAtlas(){if(atlasVisible&&!atlasScheduled){atlasScheduled=true;requestAnimationFrame(updateAtlas)}}
+ if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>{atlasVisible=entry.isIntersecting;if(atlasVisible){addEventListener('scroll',scheduleAtlas,{passive:true});scheduleAtlas()}else removeEventListener('scroll',scheduleAtlas)}).observe($('.journey-layout'));
+ else addEventListener('scroll',scheduleAtlas,{passive:true});
+ addEventListener('resize',scheduleAtlas,{passive:true});scheduleAtlas();
  $$('[data-atlas-node]').forEach(e=>e.addEventListener('click',()=>{const i=Number(e.dataset.atlasNode);select(i);entries[i].scrollIntoView({block:'center',behavior:reduced()?'instant':'smooth'})}));
 }
 
@@ -93,7 +94,7 @@ function drawWorld(value) {
  const a=worldStates[base],b=worldStates[base+1];
  const xy=a.xy.map((p,i)=>[lerp(p[0],b.xy[i][0],t),lerp(p[1],b.xy[i][1],t)]);
  worldNodes.forEach((el,i)=>{
-  el.removeAttribute('transform');el.style.transform=`translate(${xy[i][0].toFixed(2)}px, ${xy[i][1].toFixed(2)}px)`;
+  el.setAttribute('transform',`translate(${xy[i][0].toFixed(2)} ${xy[i][1].toFixed(2)})`);
   el.style.opacity=lerp(a.opacity[i],b.opacity[i],t).toFixed(3);
  });
  worldEdges.forEach((el,i)=>{
@@ -113,13 +114,87 @@ function drawWorld(value) {
  $('#world-contour').style.opacity=(.15+.13*Math.sin(worldProgress/3*Math.PI)).toFixed(3);
  storyBeats.forEach((el,i)=>el.classList.toggle('is-current',i===current));
  $('#world-map').dataset.stage=String(current);
+ $('#world-map').dataset.progress=worldProgress.toFixed(3);
 }
 function setMapState(index){drawWorld(clamp(index,0,3));}
 function setLens(key){const stages={person:0,organisation:1,product:3};if(key in stages)drawWorld(stages[key]);}
 
 
- drawWorld(0);
- if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>{const e=es.find(e=>e.isIntersecting);if(e)drawWorld(Number(e.target.dataset.storyStep))},{rootMargin:'-30% 0px -45% 0px'});storyBeats.forEach(e=>io.observe(e))}
+ let scheduled=false,visible=true,hoverStory=null;
+ const finePointer=matchMedia('(hover: hover) and (pointer: fine)');
+ function renderMap(){
+  scheduled=false;
+  if(!visible||document.hidden)return;
+  const vh=innerHeight,vw=innerWidth;
+  $('#world-map').setAttribute('viewBox',vw<=700?'90 20 850 620':'0 0 1000 660');
+  const line=vw<=700?Math.min(vh-100,104+310+(vh-414)*.48):80+(vh-80)*.5;
+  const centers=storyBeats.map(el=>{const r=el.getBoundingClientRect();return r.top+r.height*.5});
+  let progress=0;
+  if(line>=centers[3])progress=3;
+  else if(line>centers[0])for(let i=0;i<3;i++)if(line>=centers[i]&&line<centers[i+1]){progress=i+(line-centers[i])/(centers[i+1]-centers[i]);break}
+  drawWorld(reduced()?3:hoverStory===null?progress:hoverStory);
+ }
+ function scheduleMap(){if(visible&&!scheduled){scheduled=true;requestAnimationFrame(renderMap)}}
+ if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>{
+  visible=entry.isIntersecting;
+  if(visible){addEventListener('scroll',scheduleMap,{passive:true});scheduleMap()}
+  else removeEventListener('scroll',scheduleMap);
+ }).observe($('#playground'));
+ else addEventListener('scroll',scheduleMap,{passive:true});
+ addEventListener('resize',scheduleMap,{passive:true});
+ document.addEventListener('visibilitychange',scheduleMap);
+ media.addEventListener('change',scheduleMap);$('#motion-toggle').addEventListener('click',scheduleMap);
+ storyBeats.forEach((el,i)=>{el.addEventListener('pointerenter',event=>{if(finePointer.matches&&event.pointerType!=='touch'){hoverStory=i;scheduleMap()}});el.addEventListener('pointerleave',()=>{hoverStory=null;scheduleMap()})});
+ drawWorld(reduced()?3:0);scheduleMap();
+}
+
+if($('#living-svg')){
+const hero=$('.identity-hero');
+const livingNodes=[$('#living-people'),$('#living-context'),$('#living-possibility')];
+const livingWires=$$('#living-wires path');
+let heroRAF=0,lastTime=null,elapsed=0;
+let heroInView=true;
+function drawLiving(time){
+ const phase=time/1000;
+ const gather=.5-.5*Math.cos(phase*Math.PI/4.8);
+ const positions=[
+  [70+42*gather,76+14*Math.sin(phase*.64)],
+  [333-30*gather,44+13*Math.sin(phase*.72+1.5)],
+  [327-20*gather,116+10*Math.sin(phase*.69+3.5)]
+ ];
+ livingNodes.forEach((el,i)=>el.setAttribute('transform',`translate(${positions[i][0].toFixed(2)} ${positions[i][1].toFixed(2)})`));
+ livingWires.forEach((el,i)=>{
+  const [x,y]=positions[i];
+  el.setAttribute('d',`M220 77 Q${(220+x)/2} ${(77+y)/2+(i===0?25:-20)} ${x} ${y}`);
+  el.style.opacity=(.42+.4*gather).toFixed(3);
+ });
+ $('#living-asterisk').setAttribute('transform',`rotate(${(phase*13)%360}) scale(${1+.05*Math.sin(phase*1.3)})`);
+ const travel=(phase*.2)%1;
+ const a=[220,77], b=positions[0], ctrl=[(220+b[0])/2,(77+b[1])/2+25];
+ const px=(1-travel)**2*a[0]+2*(1-travel)*travel*ctrl[0]+travel**2*b[0];
+ const py=(1-travel)**2*a[1]+2*(1-travel)*travel*ctrl[1]+travel**2*b[1];
+ $('#living-packet').setAttribute('cx',px.toFixed(2));$('#living-packet').setAttribute('cy',py.toFixed(2));
+ $('#living-svg').dataset.frame=String(Math.round(time));
+}
+function canPlayHero(){return !reduced()&&!document.hidden&&!document.querySelector('dialog[open]')&&heroInView;}
+function tickHero(now){
+ heroRAF=0;
+ if(!canPlayHero()){lastTime=null;return;}
+ if(lastTime!==null)elapsed+=Math.min(64,now-lastTime);
+ lastTime=now;drawLiving(elapsed);
+ heroRAF=requestAnimationFrame(tickHero);
+}
+function updateHeroState(){
+ const r=hero.getBoundingClientRect();heroInView=r.bottom>80&&r.top<window.innerHeight;
+ const playing=canPlayHero();document.documentElement.dataset.heroPlaying=playing?'on':'off';
+ if(playing&&!heroRAF){lastTime=null;heroRAF=requestAnimationFrame(tickHero);}
+ else if(!playing&&heroRAF){cancelAnimationFrame(heroRAF);heroRAF=0;lastTime=null;}
+}
+if('IntersectionObserver' in window){new IntersectionObserver(()=>updateHeroState(),{threshold:0}).observe(hero);}
+document.addEventListener('visibilitychange',updateHeroState);
+$('#motion-toggle').addEventListener('click',updateHeroState);media.addEventListener('change',updateHeroState);
+
+ drawLiving(0);updateHeroState();
 }
 
 
