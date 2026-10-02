@@ -1,6 +1,6 @@
 export function WorkNoRushBeQuick() {
   return (
-    <main className="study-main" id="main-content">
+    <main className="study-main nrbq-case" id="main-content">
       <a className="back-to-work" href="/#work">
         ← Selected work
       </a>
@@ -145,40 +145,70 @@ export function WorkNoRushBeQuick() {
               next attempt and make learning feel like something they could see
               growing.
             </p>
-            <figure className="study-figure">
-              <img
-                src="/assets/nrbq-learn-game-keyboard-light.png"
-                alt="Light-mode Learn screen at Shek Mun, with the game keyboard below a Jyutping map. The completed sek syllable lights up s, e and k, and progress shows one of forty combinations unlocked."
-                width="639"
-                height="783"
-                loading="lazy"
-              />
-              <figcaption>
-                Learn mode with the game keyboard. After completing sek, its
-                sound parts light up on the map: guidance for the next attempt,
-                and a visible record of a small achievement.
-              </figcaption>
-            </figure>
             <p>
               Challenge mode gives that practice a different rhythm. Typing
               moves the train along the route, while station prompts, speed and
-              the frustration meter bring the journey into the same screen.
-              The focus shifts from exploring sounds to keeping the ride moving.
+              the frustration meter bring the journey into the same screen. The
+              focus shifts from exploring sounds to keeping the ride moving.
             </p>
-            <figure className="study-figure">
-              <img
-                src="/assets/nrbq-challenge-dark.png"
-                alt="Dark-mode Challenge gameplay on the East Rail route, with a train travelling from Lo Wu towards Sheung Shui, a frustration meter, station prompt, typing speed and on-screen game keyboard."
-                width="639"
-                height="783"
-                loading="lazy"
-              />
-              <figcaption>
-                Challenge mode with the game keyboard. The route, station
-                prompt and live feedback turn typing practice into a moving
-                journey. Shown during a demonstration play session.
-              </figcaption>
-            </figure>
+            <div className="nrbq-gameplay-pair">
+              <figure className="study-figure">
+                <a
+                  href="/assets/nrbq-learn-game-keyboard-light.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open full-size Learn mode screenshot in a new tab"
+                >
+                  <img
+                    src="/assets/nrbq-learn-game-keyboard-light.png"
+                    alt="Light-mode Learn screen at Shek Mun. Completing sek lights up s, e and k on the Jyutping map, unlocking one of forty combinations."
+                    width="639"
+                    height="783"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>
+                  <strong>Learn · Explore and unlock</strong>
+                  Sound parts light up after a successful attempt, making a
+                  small achievement visible.
+                  <a
+                    href="/assets/nrbq-learn-game-keyboard-light.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View full size ↗
+                  </a>
+                </figcaption>
+              </figure>
+              <figure className="study-figure">
+                <a
+                  href="/assets/nrbq-challenge-dark.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open full-size Challenge mode screenshot in a new tab"
+                >
+                  <img
+                    src="/assets/nrbq-challenge-dark.png"
+                    alt="Dark-mode Challenge on the East Rail route: moving train, station prompt, frustration meter, typing speed and game keyboard."
+                    width="639"
+                    height="783"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>
+                  <strong>Challenge · Keep the ride moving</strong>
+                  The route and live feedback give practice a quicker rhythm.
+                  Demonstration play session.
+                  <a
+                    href="/assets/nrbq-challenge-dark.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View full size ↗
+                  </a>
+                </figcaption>
+              </figure>
+            </div>
           </section>
           <section className="study-section" id="scope">
             <p className="study-label">02 / FINDING THE MVP</p>
@@ -244,8 +274,8 @@ export function WorkNoRushBeQuick() {
                 loading="lazy"
               />
               <figcaption>
-                A closer look at the beginner keyboard: d + u + ng forms dung
-                in three sound selections, then SPACE submits it. Available in
+                A closer look at the beginner keyboard: d + u + ng forms dung in
+                three sound selections, then SPACE submits it. Available in
                 Learn mode, including its survival challenge.
               </figcaption>
             </figure>

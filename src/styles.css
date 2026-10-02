@@ -12042,3 +12042,93 @@ html[data-motion="off"]::view-transition-new(*) {
     justify-content: flex-start;
   }
 }
+
+/* Compact gameplay comparison, with full-resolution images one click away. */
+.nrbq-gameplay-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 640px;
+  margin: 28px auto 32px;
+}
+.nrbq-gameplay-pair .study-figure {
+  margin: 0 !important;
+  min-width: 0;
+}
+.nrbq-gameplay-pair .study-figure > a {
+  display: block;
+  width: min(100%, 294px);
+  margin-inline: auto;
+}
+.nrbq-gameplay-pair figcaption {
+  font-size: 12px;
+  line-height: 1.65;
+}
+.nrbq-gameplay-pair figcaption strong,
+.nrbq-gameplay-pair figcaption a {
+  display: block;
+}
+.nrbq-gameplay-pair figcaption strong {
+  color: var(--page-ink);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.nrbq-gameplay-pair figcaption a {
+  margin-top: 8px;
+  color: var(--page-rust);
+  text-underline-offset: 3px;
+}
+html {
+  scroll-padding-top: calc(var(--header-height, 76px) + 16px);
+}
+.routed-page .study-section {
+  scroll-margin-top: 0;
+}
+@media (max-width: 760px) {
+  .routed-page .study-toc {
+    position: sticky;
+    top: var(--header-height, 110px);
+    z-index: 15;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 18px;
+    padding: 0;
+    margin-bottom: 28px;
+    background: var(--page-paper);
+    border-block: 1px solid var(--study-line);
+    font-size: 12px;
+  }
+  .routed-page .study-toc > .study-label {
+    display: none;
+  }
+  .routed-page .study-toc > a {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    white-space: nowrap;
+    padding: 8px 2px;
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+  }
+  .routed-page .study-toc > a.active {
+    border-bottom-color: var(--page-rust);
+  }
+  html {
+    scroll-padding-top: calc(var(--header-height, 110px) + var(--chapter-nav-height, 0px) + 16px);
+  }
+  .nrbq-gameplay-pair {
+    gap: 14px;
+    margin-block: 24px;
+  }
+  .nrbq-gameplay-pair figcaption {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+@media print {
+  .routed-page .study-toc {
+    display: none;
+  }
+}

@@ -60,6 +60,23 @@ export function mountInteractions() {
           : null);
     if (path) location.replace(path);
   }
+  // Measure the two navigation rows so chapter links clear them at every size.
+  const header = $("#site-header");
+  const chapterNav = $(".study-toc");
+  const syncNavigationHeight = () => {
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${header.getBoundingClientRect().height}px`,
+    );
+    document.documentElement.style.setProperty(
+      "--chapter-nav-height",
+      `${chapterNav?.getBoundingClientRect().height ?? 0}px`,
+    );
+  };
+  syncNavigationHeight();
+  const navigationSize = scope.resize(syncNavigationHeight);
+  navigationSize.observe(header);
+  if (chapterNav) navigationSize.observe(chapterNav);
   const printButton = $(".print-resume");
   if (printButton) scope.listen(printButton, "click", () => window.print());
   const reveals = $$(".gallery-case,.study-cover,[data-reveal]");
@@ -133,6 +150,8 @@ export function mountInteractions() {
   mountProjectGallery(scope);
   return () => {
     scope.dispose();
+    document.documentElement.style.removeProperty("--header-height");
+    document.documentElement.style.removeProperty("--chapter-nav-height");
     document.documentElement.classList.remove("js");
   };
 }
