@@ -69,7 +69,7 @@ export function WorkStar() {
           {"← Back to all work"}
         </a>
         <span className="study-label">
-          {"No confidential files are included."}
+          {"Internal project materials remain private."}
         </span>
       </footer>
       <div className="case-end">

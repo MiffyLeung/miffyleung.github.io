@@ -55,7 +55,7 @@ export function WorkCantomore() {
             <h2>{"My contribution within the team"}</h2>
             <p>
               {
-                "I lead curriculum design and contribute to early-stage product planning. I translate learner needs into learning journeys, face-to-face activities, game-based concepts and supporting digital tools. The wider concept and trade-offs are developed collaboratively with my co-founders."
+                "I designed and developed the entire NRBQ game, including its learning journey and keyboard interactions. My teammates contributed QA, marketing and cultural innovation ideas. Across CantoMore, I also lead curriculum design and contribute to early-stage product planning with my co-founders."
               }
             </p>
           </section>
@@ -85,9 +85,7 @@ export function WorkCantomore() {
             </p>
           </aside>
           <p className="source-note">
-            {
-              "Concept cover, not an original product screen. This page is a project summary; detailed artifacts and supporting evidence will be added before the full case study is published."
-            }
+            {"Project overview: context, contribution and reflection."}
           </p>
         </div>
       </div>

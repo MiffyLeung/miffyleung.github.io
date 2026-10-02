@@ -127,7 +127,7 @@ export const routes: PortfolioRoute[] = [
     path: "/work/no-rush-be-quick/",
     title: "No Rush Be Quick · Miffy Leung",
     description:
-      "A transit-inspired browser game for practising Jyutping typing. A concrete experiment in making language practice feel like part of everyday Hong Kong life.",
+      "I designed and built NRBQ, a Jyutping game around Hong Kong transit, then revised its keyboard choices and beginner input in response to player feedback.",
     bodyClass: "routed-page case-page",
     active: "work",
     Component: WorkNoRushBeQuick,
@@ -154,7 +154,7 @@ export const routes: PortfolioRoute[] = [
     path: "/work/color-identity/",
     title: "Color Identity · Miffy Leung",
     description:
-      "A course project exploring personal colour through a photo, stated preferences, and vision and language AI. It also became a question about the role technology should have in self-expression.",
+      "A course project I led across web development and AI integration, combining photo analysis, preferences and colour recommendations with feedback on context and culture.",
     bodyClass: "routed-page case-page",
     active: "work",
     Component: WorkColorIdentity,
@@ -163,7 +163,7 @@ export const routes: PortfolioRoute[] = [
     path: "/work/tell-me-lah/",
     title: "Tell Me Lah · Miffy Leung",
     description:
-      "A prototype I made within CantoMore. The product concept, screens and internal materials are not included in this public portfolio.",
+      "A prototype I made within CantoMore. This public overview describes my role; product details and internal materials remain confidential.",
     bodyClass: "routed-page case-page",
     active: "work",
     Component: WorkTellMeLah,

@@ -62,7 +62,7 @@ export function Thinking() {
           <div className="story-bottomline">
             <span id="story-status">{"01 / Listen before designing"}</span>
             <span className="story-illustration-note">
-              {"A working model, not a claim of causation"}
+              {"A working model I keep refining"}
             </span>
           </div>
         </div>
@@ -77,7 +77,7 @@ export function Thinking() {
             </h3>
             <p>
               {
-                "I started ToLearner because I recognised the experience of students with fewer resources. That gives me a reason to care — not permission to assume everyone needs what I needed."
+                "I started ToLearner because I recognised the experience of students with fewer resources. Listening to other students helped me understand what mattered to them."
               }
             </p>
             <p className="beat-principle">
@@ -89,8 +89,8 @@ export function Thinking() {
             <h3>
               {"Their experience"}
               <br />
-              {" doesn’t happen "}
-              <em>{"alone."}</em>
+              {" takes shape "}
+              <em>{"in context."}</em>
             </h3>
             <p>
               {
@@ -104,14 +104,14 @@ export function Thinking() {
           <article className="story-beat" data-story-step="2">
             <p className="beat-number">{"03 / Question the picture"}</p>
             <h3>
-              {"A connection isn’t"}
+              {"A connection invites"}
               <br />
-              {" automatically "}
-              <em>{"a fact."}</em>
+              {" a closer "}
+              <em>{"look."}</em>
             </h3>
             <p>
               {
-                "I separate what we know from what we think we know, including my own assumptions. Seeing more of the system should help us choose a sharper problem, not add every possible feature."
+                "I separate what we know from what we think we know, including my own assumptions. Seeing more of the system helps me choose a sharper problem and decide which part to work on first."
               }
             </p>
             <p className="beat-principle">
@@ -140,7 +140,7 @@ export function Thinking() {
           <p>
             {"The picture gets clearer."}
             <br />
-            {" It never becomes unquestionable."}
+            {" I keep asking what could change it."}
           </p>
           <a href="/#work">
             {"See this thinking in my work "}

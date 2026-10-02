@@ -15,7 +15,7 @@ export function WorkTellMeLah() {
         </h1>
         <p className="study-deck">
           {
-            "A prototype I made within CantoMore. The product concept, screens and internal materials are not included in this public portfolio."
+            "A prototype I made within CantoMore. This public overview describes my role; product details and internal materials remain confidential."
           }
         </p>
       </div>
@@ -68,7 +68,7 @@ export function WorkTellMeLah() {
           {"← Back to all work"}
         </a>
         <span className="study-label">
-          {"No confidential files are included."}
+          {"Internal project materials remain private."}
         </span>
       </footer>
       <div className="case-end">

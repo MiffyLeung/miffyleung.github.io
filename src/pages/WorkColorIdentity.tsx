@@ -14,12 +14,12 @@ export function WorkColorIdentity() {
         <h1>
           {"A palette to explore."}
           <br />
-          {" Not a verdict on "}
-          <em>{"you."}</em>
+          {" A way to express "}
+          <em>{"yourself."}</em>
         </h1>
         <p className="study-deck">
           {
-            "A course project exploring personal colour through a photo, stated preferences, and vision and language AI. It also became a question about the role technology should have in self-expression."
+            "I led web application development and AI integration for a course project combining photo analysis, personal preferences and colour recommendations. Our feedback raised practical questions about context, culture and how people interpret a palette."
           }
         </p>
       </div>
@@ -28,7 +28,7 @@ export function WorkColorIdentity() {
           <dt>{"My contribution"}</dt>
           <dd>
             {
-              "Python image-to-embedding work; interface and instructions refined using pilot feedback."
+              "Led web development and AI integration; research planning, architecture and methodology writing."
             }
           </dd>
         </div>
@@ -47,15 +47,17 @@ export function WorkColorIdentity() {
         <div>
           <dt>{"Scope"}</dt>
           <dd>
-            {"The Python work and the public frontend are separate artifacts."}
+            {
+              "Course AI work and a public interface prototype using sample results."
+            }
           </dd>
         </div>
       </dl>
       <aside aria-label="Key takeaway" className="study-takeaway">
-        <p className="study-label">{"What I would design differently now"}</p>
+        <p className="study-label">{"What the feedback brought into focus"}</p>
         <p>
           {
-            "Make a recommendation something the person can interpret, reject or change—not an assessment of who they are."
+            "A palette needs context: people wanted examples they could recognise themselves in, and room to decide how to use the recommendation."
           }
         </p>
       </aside>
@@ -103,7 +105,7 @@ export function WorkColorIdentity() {
             {"The experience"}
           </a>
           <a data-chapter="scope" href="#scope">
-            {"Prototype scope"}
+            {"Decisions & feedback"}
           </a>
           <a data-chapter="reflection" href="#reflection">
             {"What I see differently"}
@@ -115,7 +117,7 @@ export function WorkColorIdentity() {
             <h2>{"The original experience."}</h2>
             <p>
               {
-                "We explored personal-colour analysis through a photo, a questionnaire and palette recommendations. The course deck calls this “Colourful Identity.” Looking back at that experience now, I also question how the interface could give people more ownership of what the result means."
+                "We explored how photo analysis and a person’s own preferences could help them choose colours for daily life. I led the web application and AI integration, and contributed to research planning and the report’s architecture and methodology. My teammates worked on dataset curation, market and competitor research, report drafting and presentation."
               }
             </p>
             <div className="artifact-actions">
@@ -168,7 +170,7 @@ export function WorkColorIdentity() {
               />
               <figcaption>
                 {
-                  "Team-described architecture from the course deck, slide 12. This diagram is not evidence that the public frontend executes the complete pipeline."
+                  "Team architecture from the course deck, slide 12: facial analysis, seasonal classification, preference refinement and language output."
                 }
               </figcaption>
             </figure>
@@ -197,61 +199,71 @@ export function WorkColorIdentity() {
             </p>
           </section>
           <section className="study-section" id="scope">
-            <p className="study-label">{"03 / PROTOTYPE SCOPE"}</p>
-            <h2>
-              {"Different artifacts."}
-              <br />
-              {" Different things to test."}
-            </h2>
+            <p className="study-label">03 / DESIGN DECISIONS & FEEDBACK</p>
+            <h2>Make the recommendation understandable and useful.</h2>
             <p>
-              {
-                "I implemented a Python image-to-embedding pipeline and iterated the interface and instructional content using pilot feedback."
-              }
+              Our course report describes a modular image-analysis pipeline,
+              seasonal classification and rule-based preference refinement. I
+              worked on the web application, AI integration and Python
+              image-to-embedding work. The public frontend demonstrates the
+              photo → questionnaire → palette journey with sample results.
             </p>
-            <p>
-              {
-                "The course deck describes the team’s AI architecture. The public frontend demonstrates the photo → questionnaire → palette interaction with sample results. In this snapshot, the analysis page uses a simulated delay, fixed palettes and a fixed personality description; it is an interface prototype rather than an end-to-end demonstration of the AI pipeline."
-              }
-            </p>
-            <div className="study-insight">
-              <span aria-hidden="true" className="insight-mark">
-                {"↳"}
-              </span>
+            <div className="decision-block">
+              <p className="study-label">THE TECHNICAL TRADE-OFF</p>
+              <h3>Separate the stages so we can inspect them.</h3>
               <p>
-                {
-                  "A workable interaction flow and a meaningful AI recommendation are different things to evaluate. This prototype does not establish personality validity or measured gains in self-understanding."
-                }
+                The team chose a modular pipeline and explicit preference rules
+                to keep the stages understandable and easier to debug. Limited
+                subtype-labelled data shaped that choice. The report also
+                records that ambiguous season predictions and neutral
+                preferences could produce awkward combinations—a reason to
+                explore confidence modelling in a future iteration.
+              </p>
+            </div>
+            <div className="decision-block">
+              <p className="study-label">FEEDBACK / CONTEXT</p>
+              <h3>People wanted to picture themselves in the result.</h3>
+              <p>
+                The report records requests for more contextual examples and
+                style archetypes. Participants wanted to understand how a
+                palette might look on someone like them. That points towards
+                visual previews and examples organised around real settings and
+                preferences.
+              </p>
+            </div>
+            <div className="decision-block">
+              <p className="study-label">FEEDBACK / CULTURE</p>
+              <h3>
+                A seasonal label can mean different things to different people.
+              </h3>
+              <p>
+                Some East Asian testers found palettes labelled “Spring” too
+                muted. The report identifies cultural interpretation as a reason
+                to explore regional calibration. A technically coherent label
+                still needs to make sense to the person using it.
               </p>
             </div>
             <p className="source-note">
-              {"Implementation boundary checked against "}
-              <a
-                className="source-link"
-                href="https://github.com/MiffyLeung/color-identity-muse/blob/main/src/pages/AnalyzePage.tsx"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {"the public analysis-page source "}
-                <span aria-hidden="true">{"↗"}</span>
-              </a>
-              {"."}
+              Qualitative observations and design decisions from the course
+              written report, sections 5–6. Further evaluation would establish
+              how these changes affect recommendation quality.
             </p>
           </section>
           <section className="study-section" id="reflection">
             <p className="study-label">{"04 / WHAT I SEE DIFFERENTLY NOW"}</p>
             <h2>
-              {"The most important output"}
+              {"Give people examples"}
               <br />
-              {" isn’t the machine’s opinion."}
+              {" and room to choose."}
             </h2>
             <p>
               {
-                "This was my first project using vision and language AI to help people express themselves. The harder question stayed with me: how should someone relate to an AI’s suggestion about who they are?"
+                "This was my first project using vision and language AI to help people express themselves. It taught me to consider the explanation and context around a result alongside the analysis that produces it."
               }
             </p>
             <p>
               {
-                "The original concept included personal-colour and personality language. Today, I would make the distinction between a suggestion and an assessment much more explicit, and give people a clear way to disagree, adjust and make the palette their own. These are proposed changes for a future iteration."
+                "For a next iteration, I would add contextual previews and let people adjust their preferences and palette. I would also explore regional calibration and a clearer expression of uncertainty, following the questions raised in our course report."
               }
             </p>
             <div className="study-insight">

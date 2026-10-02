@@ -20,7 +20,7 @@ export function About() {
             <h1 id="about-heading">
               {"My starting point."}
               <br />
-              <em>{"Not my boundary."}</em>
+              <em>{"What I carry forward."}</em>
             </h1>
           </div>
           <p>
@@ -37,7 +37,7 @@ export function About() {
         <div className="journey-layout" id="working-model">
           <aside className="journey-atlas">
             <div className="atlas-header mono">
-              <span>{"A map, not a straight line"}</span>
+              <span>{"How the picture grew"}</span>
               <span id="atlas-count">{"01 / 05"}</span>
             </div>
             <WorkingModel />
@@ -109,7 +109,7 @@ export function About() {
                 }
               </p>
               <p className="journey-caption">
-                {"A design belief, not a claim that AI can measure identity."}
+                {"Keep the person in charge of the interpretation."}
               </p>
               <a className="journey-proof" href="/work/color-identity/">
                 {"Full project story "}
@@ -146,9 +146,7 @@ export function About() {
                 }
               </p>
               <p className="journey-caption">
-                {
-                  "Concepts and prototypes — not validated commercial businesses."
-                }
+                {"Service concepts, prototypes and feedback-driven revisions."}
               </p>
               <a className="journey-proof" href="/work/business/">
                 {"Explore the two concepts "}
@@ -177,12 +175,12 @@ export function About() {
               </p>
               <p className="thought-note">
                 {
-                  "CantoMore grew from language learning toward cultural connection and participation in Hong Kong. I am now its Co-founder & Tech Lead. I build digital experiences, lead curriculum design and contribute to early-stage product planning, refining the concept with teammates around learning value, feasibility and school adoption."
+                  "CantoMore grew from language learning toward cultural connection and participation in Hong Kong. I am now its Co-founder & Tech Lead. I designed and developed the entire NRBQ game and its learning journey, while teammates contributed QA, marketing and cultural innovation ideas. I also lead curriculum design and contribute to wider product planning."
                 }
               </p>
               <p className="journey-caption">
                 {
-                  "A wider understanding does not mean an unlimited product scope."
+                  "For NRBQ, I focused the MVP on transit and redesigned input after keyboard feedback."
                 }
               </p>
               <a className="journey-proof" href="/work/cantomore/">
@@ -214,12 +212,12 @@ export function About() {
               </p>
               <p className="thought-note">
                 {
-                  "EdCity deepened a belief I already held: innovation should begin with real needs, not technology for its own sake. Working in an established organisation added stakeholder conflict, organisational constraints and product repositioning to how I evaluate an idea."
+                  "EdCity deepened my attention to real stakeholder needs. Working in an established organisation added stakeholder conflict, organisational constraints and product repositioning to how I evaluate an idea."
                 }
               </p>
               <p className="journey-caption">
                 {
-                  "Confidential experience. No internal project details are displayed."
+                  "Product innovation experience in an established organisation."
                 }
               </p>
               <p className="confidential-note">

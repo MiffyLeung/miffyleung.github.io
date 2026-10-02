@@ -12015,3 +12015,30 @@ html[data-motion="off"]::view-transition-new(*) {
     visibility: visible !important;
   }
 }
+
+/* Contact options remain readable in the footer and printed resume. */
+.footer-contact-links,
+.resume-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+.footer-contact-links {
+  justify-content: flex-end;
+  margin: 12px 0 28px;
+  font-size: 14px;
+}
+.footer-contact-links a,
+.resume-contact-links a {
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.resume-contact-links {
+  margin-top: 12px;
+}
+@media (max-width: 640px) {
+  .footer-contact-links {
+    justify-content: flex-start;
+  }
+}

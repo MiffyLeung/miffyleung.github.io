@@ -55,11 +55,9 @@ export function Header({ active }: { active: Navigation }) {
             </span>
           </a>
           <a
-            aria-label="Contact Miffy on LinkedIn (opens in a new tab)"
+            aria-label="Email Miffy"
             className="nav-contact"
-            href="https://www.linkedin.com/in/miffy-leung/"
-            rel="noopener noreferrer"
-            target="_blank"
+            href="mailto:miffyleung2020@gmail.com"
           >
             {"Contact ↗"}
           </a>

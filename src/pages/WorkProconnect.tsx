@@ -38,9 +38,7 @@ export function WorkProconnect() {
         <div>
           <dt>{"Scope"}</dt>
           <dd>
-            {
-              "Concept-stage work; no launched service or commercial validation is claimed."
-            }
+            {"Concept-stage service modelling and interface prototyping."}
           </dd>
         </div>
       </dl>
@@ -48,7 +46,7 @@ export function WorkProconnect() {
         <p className="study-label">{"What I take forward"}</p>
         <p>
           {
-            "The screen is not the whole service. People, coordination and delivery shape whether the experience can work."
+            "People, coordination and delivery shape whether a service can work. I connect these conditions with the interface."
           }
         </p>
       </aside>

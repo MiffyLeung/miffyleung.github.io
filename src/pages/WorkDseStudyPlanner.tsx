@@ -97,9 +97,7 @@ export function WorkDseStudyPlanner() {
               </span>
             </div>
           </div>
-          <span className="art-disclosure">
-            {"Conversation illustration · not a bot transcript"}
-          </span>
+          <span className="art-disclosure">{"Conversation illustration"}</span>
         </div>
       </div>
       <div className="study-layout">
@@ -151,7 +149,7 @@ export function WorkDseStudyPlanner() {
             <h2>
               {"A tool within a community."}
               <br />
-              {"Not the whole community."}
+              {"With a wider community behind it."}
             </h2>
             <p>
               {
@@ -160,7 +158,7 @@ export function WorkDseStudyPlanner() {
             </p>
             <p>
               {
-                "The community included bilingual content, student communication and digital tools. This project focuses on one of those tools—not every part of that broader work."
+                "The community included bilingual content, student communication and digital tools. This case focuses on the time-planning chatbot."
               }
             </p>
             <a className="secondary-link" href="/work/tolearner/">
@@ -191,9 +189,7 @@ export function WorkDseStudyPlanner() {
               </p>
             </div>
             <p className="source-note">
-              {
-                "This is my current reflection and evaluation direction, not a claim that this specific change was already tested."
-              }
+              {"My proposed direction for the next iteration."}
             </p>
           </section>
           <section className="study-section" id="scope">
@@ -205,7 +201,7 @@ export function WorkDseStudyPlanner() {
             </h2>
             <p>
               {
-                "The linked artifact is the Poe time-planning chatbot I created. ToLearner’s overall platform reach is not used as a usage figure for this bot."
+                "The linked artifact is the Poe time-planning chatbot I created within ToLearner."
               }
             </p>
             <div className="decision-block">

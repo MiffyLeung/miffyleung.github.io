@@ -23,13 +23,18 @@ export function Resume() {
               "I make complex problems clearer by mapping stakeholder needs, questioning assumptions and turning ideas into prototypes. My experience spans product innovation, social entrepreneurship, AI-supported experiences and community programmes. I bring a systems perspective to unfamiliar contexts, connecting user value with delivery, adoption and sustainability."
             }
           </p>
-          <a
-            href="https://www.linkedin.com/in/miffy-leung/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {"linkedin.com/in/miffy-leung ↗"}
-          </a>
+          <div className="resume-contact-links">
+            <a href="mailto:miffyleung2020@gmail.com">
+              miffyleung2020@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/miffy-leung/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {"linkedin.com/in/miffy-leung ↗"}
+            </a>
+          </div>
         </div>
         <div className="resume-sections" id="resume-sections">
           <section>
@@ -138,12 +143,12 @@ export function Resume() {
               </li>
               <li>
                 {
-                  "Currently Co-founder & Tech Lead. Built No Rush Be Quick, a public web game, while continuing to lead curriculum design and contribute to early-stage product planning across journeys, activities, game concepts and supporting tools."
+                  "Designed and developed the entire No Rush Be Quick game, including its learning journey, interaction model and keyboards. Teammates contributed QA, marketing and cultural innovation ideas."
                 }
               </li>
               <li>
                 {
-                  "Refine the concept with teammates through feedback and trade-offs around learning value, feasibility and potential school adoption."
+                  "Scoped the MVP around Hong Kong transit; responded to keyboard feedback with system-keyboard choice and a beginner Jyutping keyboard using up to three sound selections per syllable."
                 }
               </li>
             </ul>
@@ -221,7 +226,7 @@ export function Resume() {
             <ul>
               <li>
                 {
-                  "Implemented a Python image-to-embedding pipeline and iterated the interface and instructional content using pilot feedback, combining technical experimentation with user-centred design."
+                  "Led web application development and AI integration; contributed to research planning and architecture and methodology writing. Developed Python image-to-embedding work and refined the interface and instructions using pilot feedback."
                 }
               </li>
             </ul>

@@ -61,7 +61,7 @@ export function WorkSmallCampus() {
         <p className="study-label">{"WHAT I TAKE FORWARD"}</p>
         <p>
           {
-            "The experience deepened how I think about stakeholder needs, organisational constraints and product repositioning. Design details and internal materials are not shown here."
+            "The experience deepened how I think about stakeholder needs, organisational constraints and product repositioning. The public overview focuses on my professional learning."
           }
         </p>
       </section>
@@ -70,7 +70,7 @@ export function WorkSmallCampus() {
           {"← Back to all work"}
         </a>
         <span className="study-label">
-          {"No confidential files are included."}
+          {"Internal project materials remain private."}
         </span>
       </footer>
       <div className="case-end">

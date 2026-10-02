@@ -101,9 +101,7 @@ export function WorkInno() {
               <strong>{"“Take the Aptitude Test”"}</strong>
               {" and "}
               <strong>{"“Explore Mentors”"}</strong>
-              {
-                ". Assessment is the starting point of the proposal, not its only service."
-              }
+              {". Assessment introduces the wider service proposal."}
             </p>
             <figure className="study-figure inno-source-figure">
               <img
@@ -184,7 +182,7 @@ export function WorkInno() {
                   <h3>{"Open-ended scenario assessment"}</h3>
                   <p>
                     {
-                      "Voice-based responses to scenarios, rather than only multiple-choice questions, as inputs to the proposed analysis of personality, abilities and interests."
+                      "Voice-based responses to scenarios as inputs to the proposed analysis of personality, abilities and interests."
                     }
                   </p>
                 </div>
@@ -241,10 +239,7 @@ export function WorkInno() {
                 "The proposal uses a free entry point to attract users, with paid mentor matching for job seekers and subscription access for employers."
               }
             </p>
-            <div
-              aria-label="Proposed pricing, not realised revenue"
-              className="inno-pricing"
-            >
+            <div aria-label="Proposed pricing model" className="inno-pricing">
               <div>
                 <span className="study-label">{"GET STARTED"}</span>
                 <strong>{"Free"}</strong>
@@ -291,7 +286,7 @@ export function WorkInno() {
                   {"Original project artifact"}
                 </span>
                 {
-                  " Pitch deck, p. 11. Proposed pricing—not actual revenue or validated willingness to pay."
+                  " Pitch deck, p. 11. Proposed pricing to explore in future service validation."
                 }
               </figcaption>
             </figure>
@@ -337,7 +332,7 @@ export function WorkInno() {
               </span>
               <p>
                 {
-                  "A clear proposition is a starting point for testing—not proof that the service will work."
+                  "A clear proposition gives the next round of service testing a starting point."
                 }
               </p>
             </div>
@@ -356,9 +351,7 @@ export function WorkInno() {
                 }
               </p>
               <p className="source-note">
-                {
-                  "Forward-looking design questions, not tests already conducted or documented findings from the pitch."
-                }
+                {"Questions for a future round of design testing."}
               </p>
             </div>
           </section>

@@ -98,9 +98,7 @@ export function WorkNotionDsePlanner() {
               <span className="template-bottom-line"></span>
             </div>
           </div>
-          <span className="art-disclosure">
-            {"Template illustration · not a product screenshot"}
-          </span>
+          <span className="art-disclosure">{"Planner cover illustration"}</span>
         </div>
       </div>
       <div className="study-layout">
@@ -134,7 +132,7 @@ export function WorkNotionDsePlanner() {
             </p>
             <p>
               {
-                "It is distinct from the Poe chatbot. The two share a community context, but they are not presented as a single integrated product."
+                "The template and the Poe chatbot are standalone tools within the same community."
               }
             </p>
             <a
@@ -157,7 +155,7 @@ export function WorkNotionDsePlanner() {
             </p>
             <p>
               {
-                "The Notion template is one tangible contribution to that mission. The chatbot, web platform and community work are related, but they do not stand in for this project’s specific work."
+                "I contributed the Notion template as a practical planning resource, alongside the community’s chatbot and web platform."
               }
             </p>
             <a className="secondary-link" href="/work/tolearner/">
@@ -183,14 +181,12 @@ export function WorkNotionDsePlanner() {
               </span>
               <p>
                 {
-                  "More structure is not automatically more support. I would first ask which part of planning students need help with."
+                  "I would first ask which part of planning students need help with, then choose how much structure to offer."
                 }
               </p>
             </div>
             <p className="source-note">
-              {
-                "This describes how I would approach a next iteration, not a completed template-testing result."
-              }
+              {"My proposed approach to the next iteration."}
             </p>
           </section>
           <section className="study-section" id="scope">
@@ -202,7 +198,7 @@ export function WorkNotionDsePlanner() {
             </h2>
             <p>
               {
-                "The template is linked as an artifact to inspect. ToLearner’s 1,000+ students served describes the overall platform, not the number of template users, copies or completed plans."
+                "The template is linked for inspection. ToLearner served 1,000+ students across the overall platform; template adoption would be evaluated separately."
               }
             </p>
             <div className="decision-block">
@@ -220,9 +216,7 @@ export function WorkNotionDsePlanner() {
               </span>
               <a href="/work/dse-study-planner/">
                 <strong>{"DSE Study Planner · Poe"}</strong>
-                <span>
-                  {"Time planning through conversation, not a template. →"}
-                </span>
+                <span>{"Explore time planning through conversation. →"}</span>
               </a>
             </div>
           </section>

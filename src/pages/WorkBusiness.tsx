@@ -9,9 +9,9 @@ export function WorkBusiness() {
           {"Inno / ProConnect / Business & service model exploration"}
         </p>
         <h1>
-          {"An interface is not"}
+          {"Design the experience."}
           <br />
-          {"the whole business."}
+          {"Understand its delivery."}
         </h1>
         <p className="study-deck">
           {
@@ -64,7 +64,7 @@ export function WorkBusiness() {
             <h2>{"Where the work reached"}</h2>
             <p>
               {
-                "Both projects informed my understanding of business models and scalability. The supplied information establishes concepts, prototypes and feedback-driven revisions — not launched, profitable or commercially validated businesses."
+                "Both projects developed through concepts, demonstrable prototypes and feedback-driven revisions. They made business models and scalability part of how I evaluate a service idea."
               }
             </p>
           </section>
@@ -85,9 +85,7 @@ export function WorkBusiness() {
             </p>
           </aside>
           <p className="source-note">
-            {
-              "Concept cover, not an original product screen. This page is a project summary; detailed artifacts and supporting evidence will be added before the full case study is published."
-            }
+            {"Project overview: context, contribution and reflection."}
           </p>
         </div>
       </div>

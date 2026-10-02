@@ -45,11 +45,7 @@ export function WorkTolearner() {
         </div>
         <div>
           <dt>{"Reach & scope"}</dt>
-          <dd>
-            {
-              "1,000+ students served across the platform—not a membership count or usage of the individual tools."
-            }
-          </dd>
+          <dd>{"1,000+ students served across the overall platform."}</dd>
         </div>
       </dl>
       <aside aria-label="Key takeaway" className="study-takeaway">
@@ -119,7 +115,7 @@ export function WorkTolearner() {
             </div>
           </div>
           <span className="art-disclosure">
-            {"Artifact illustration · not product screenshots"}
+            {"Planning tools · Cover illustration"}
           </span>
         </div>
       </div>
@@ -197,9 +193,7 @@ export function WorkTolearner() {
               </div>
             </div>
             <p className="source-note">
-              {
-                "Two standalone artifacts within ToLearner. They are presented separately, rather than as an integrated product."
-              }
+              {"Two standalone planning tools within ToLearner."}
             </p>
           </section>
           <section className="study-section" id="context">
@@ -212,12 +206,12 @@ export function WorkTolearner() {
             </p>
             <p>
               {
-                "That personal reason made the work matter to me. It did not mean my experience could stand in for every student’s needs. Ongoing user communication and feedback became part of building and maintaining the platform."
+                "That personal reason made the work matter to me. Ongoing communication and feedback helped me understand other students’ needs while building and maintaining the platform."
               }
             </p>
             <p>
               {
-                "The community—not a particular tool—was the starting point. I managed Cantonese and English content, social media engagement and student feedback; the website, chatbot and planner were ways to support that wider mission."
+                "The community was the starting point. I managed Cantonese and English content, social media engagement and student feedback; the website, chatbot and planner supported that wider mission."
               }
             </p>
             <div className="study-insight">
@@ -226,7 +220,7 @@ export function WorkTolearner() {
               </span>
               <p>
                 {
-                  "Lived experience gives me a reason to ask better questions—not permission to assume I already know the answers."
+                  "Lived experience gives me a reason to care. Listening helps me ask better questions."
                 }
               </p>
             </div>
@@ -241,9 +235,7 @@ export function WorkTolearner() {
             </p>
             <div className="decision-block">
               <p className="study-label">{"SCOPE"}</p>
-              <h3>
-                {"Many needs do not automatically belong in one product."}
-              </h3>
+              <h3>{"Choose a focused job for each product."}</h3>
               <p>
                 {
                   "Today, I would start by choosing a specific planning moment and a clear user need, before deciding what to add."
@@ -264,7 +256,7 @@ export function WorkTolearner() {
               <h3>{"Support needs a way to sustain itself."}</h3>
               <p>
                 {
-                  "Without a scalable product and delivery model, it was difficult to balance the costs of helping people. Scalability became a design question, not a result I can claim we achieved."
+                  "Balancing the costs of helping people raised questions about a sustainable product and delivery model. I now consider scalability while choosing which problems to address."
                 }
               </p>
             </div>
@@ -272,9 +264,9 @@ export function WorkTolearner() {
           <section className="study-section" id="evidence">
             <p className="study-label">{"04 / REACH & NEXT QUESTIONS"}</p>
             <h2>
-              {"Reach is a starting point."}
+              {"People reached."}
               <br />
-              {" Not the whole outcome."}
+              {" Questions to keep exploring."}
             </h2>
             <div className="evidence-stat">
               <strong>{"1,000+"}</strong>
@@ -282,13 +274,13 @@ export function WorkTolearner() {
                 {"Senior-secondary students served by the "}
                 <b>{"overall ToLearner platform"}</b>
                 {
-                  ". This figure describes the overall platform—not usage of the planner or the linked Poe bot."
+                  ". This figure describes the overall platform; each planning tool has its own audience and usage."
                 }
               </p>
             </div>
             <p>
               {
-                "The initiative was a fund awardee of the CUHK I·CARE Social Enterprise Startup Scheme 2023–24. Platform reach does not tell me how these individual planning artifacts performed."
+                "The initiative was a fund awardee of the CUHK I·CARE Social Enterprise Startup Scheme 2023–24. Evaluating each planning tool remains a separate task."
               }
             </p>
             <p className="source-note">

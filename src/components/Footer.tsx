@@ -8,16 +8,21 @@ export function Footer() {
             <br />
             <em>{"what comes next."}</em>
           </h2>
+          <a className="pill" href="mailto:miffyleung2020@gmail.com">
+            {"Email me "}
+            <span aria-hidden="true" className="arrow">
+              {"↗"}
+            </span>
+          </a>
+        </div>
+        <div className="footer-contact-links">
+          <a href="mailto:miffyleung2020@gmail.com">miffyleung2020@gmail.com</a>
           <a
-            className="pill"
             href="https://www.linkedin.com/in/miffy-leung/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            {"Get in touch "}
-            <span aria-hidden="true" className="arrow">
-              {"↗"}
-            </span>
+            LinkedIn ↗
           </a>
         </div>
         <span className="draft-mark">

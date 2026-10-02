@@ -137,9 +137,7 @@ export function ProjectGallery() {
                   ></path>
                 </svg>
               </span>
-              <span className="sr-only">
-                {"Original portfolio artwork, not a product screenshot."}
-              </span>
+              <span className="sr-only">{"Project cover illustration."}</span>
             </div>
             <div className="gallery-info">
               <div className="gallery-title">
@@ -153,7 +151,6 @@ export function ProjectGallery() {
                 <span className="gallery-caption-type">
                   {"CantoMore · Web game"}
                 </span>
-                <span className="folio-source">{"Concept artwork"}</span>
               </p>
             </div>
           </a>
@@ -219,9 +216,7 @@ export function ProjectGallery() {
                   ></path>
                 </svg>
               </span>
-              <span className="sr-only">
-                {"Original portfolio artwork, not a product screenshot."}
-              </span>
+              <span className="sr-only">{"Project cover illustration."}</span>
             </div>
             <div className="gallery-info">
               <div className="gallery-title">
@@ -235,7 +230,6 @@ export function ProjectGallery() {
                 <span className="gallery-caption-type">
                   {"ToLearner · Poe chatbot"}
                 </span>
-                <span className="folio-source">{"Concept artwork"}</span>
               </p>
             </div>
           </a>
@@ -318,9 +312,7 @@ export function ProjectGallery() {
                   ></path>
                 </svg>
               </span>
-              <span className="sr-only">
-                {"Original portfolio artwork, not a product screenshot."}
-              </span>
+              <span className="sr-only">{"Project cover illustration."}</span>
             </div>
             <div className="gallery-info">
               <div className="gallery-title">
@@ -334,7 +326,6 @@ export function ProjectGallery() {
                 <span className="gallery-caption-type">
                   {"ToLearner · Notion template"}
                 </span>
-                <span className="folio-source">{"Concept artwork"}</span>
               </p>
             </div>
           </a>
@@ -460,9 +451,7 @@ export function ProjectGallery() {
                   ></path>
                 </svg>
               </span>
-              <span className="sr-only">
-                {"Original portfolio artwork, not a product screenshot."}
-              </span>
+              <span className="sr-only">{"Project cover illustration."}</span>
             </div>
             <div className="gallery-info">
               <div className="gallery-title">
@@ -483,7 +472,6 @@ export function ProjectGallery() {
                   </svg>
                   {"Confidential"}
                 </span>
-                <span className="folio-source">{"Concept artwork"}</span>
               </p>
             </div>
           </a>
@@ -604,9 +592,7 @@ export function ProjectGallery() {
                   ></path>
                 </svg>
               </span>
-              <span className="sr-only">
-                {"Original portfolio artwork, not a product screenshot."}
-              </span>
+              <span className="sr-only">{"Project cover illustration."}</span>
             </div>
             <div className="gallery-info">
               <div className="gallery-title">
@@ -627,7 +613,6 @@ export function ProjectGallery() {
                   </svg>
                   {"Confidential"}
                 </span>
-                <span className="folio-source">{"Concept artwork"}</span>
               </p>
             </div>
           </a>
@@ -700,9 +685,7 @@ export function ProjectGallery() {
                   ></path>
                 </svg>
               </span>
-              <span className="sr-only">
-                {"Original portfolio artwork, not a product screenshot."}
-              </span>
+              <span className="sr-only">{"Project cover illustration."}</span>
             </div>
             <div className="gallery-info">
               <div className="gallery-title">
@@ -723,7 +706,6 @@ export function ProjectGallery() {
                   </svg>
                   {"Confidential"}
                 </span>
-                <span className="folio-source">{"Concept artwork"}</span>
               </p>
             </div>
           </a>
@@ -945,9 +927,7 @@ export function ProjectGallery() {
                   ></path>
                 </svg>
               </span>
-              <span className="sr-only">
-                {"Original portfolio artwork, not a product screenshot."}
-              </span>
+              <span className="sr-only">{"Project cover illustration."}</span>
             </div>
             <div className="gallery-info">
               <div className="gallery-title">
@@ -961,7 +941,6 @@ export function ProjectGallery() {
                 <span className="gallery-caption-type">
                   {"Service design · Prototype"}
                 </span>
-                <span className="folio-source">{"Concept artwork"}</span>
               </p>
             </div>
           </a>
