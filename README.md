@@ -1,38 +1,50 @@
 # Miffy Leung — Portfolio
 
-Live site: https://miffyleung.github.io/
+Live site: [miffyleung.github.io](https://miffyleung.github.io/)
 
-This folder is connected to `MiffyLeung/miffyleung.github.io`. GitHub Pages publishes the `main` branch from the repository root.
+React 19, TypeScript and Vite. The existing design, nine projects, original SVG motion, Thinking map, biography map and full case-study copy are preserved.
 
-## Files
+## Local development
 
-- `index.html`: the homepage, with all nine selected projects.
-- `work/<project>/index.html`: each complete project or context page.
-- `thinking/index.html`: the thinking behind the work.
-- `about/index.html`: biography and professional journey.
-- `resume/index.html`: résumé, including print / save PDF support.
-- `assets/site.css` and `assets/site.js`: shared styles and motion.
-- `assets/`: original project images and shared site files.
-- `miffy-work-first-portfolio.html`: the untouched original portfolio, preserved as a reference.
-
-All routes are ordinary folders with an `index.html`, so direct links and refreshes work on GitHub Pages without a router service.
-
-## Local preview
-
-Open a terminal in this folder and run:
+Requires Node.js 22.12 or later.
 
 ```sh
-python3 -m http.server 8000
+npm ci
+npm run dev
 ```
 
-Then visit http://localhost:8000/. Use the local server for previews because assets and navigation use site-root paths.
+Open the local address printed by Vite. All pages are defined in `src/routes.ts` and link through ordinary URLs.
 
-## Publishing edits
+## Editing
 
-Commit your edits and push `main` to `origin`. GitHub Pages will publish them automatically. No forced push or credentials stored in this folder are needed.
+- `src/components/Hero.tsx`: personal introduction and homepage links.
+- `src/components/ProjectGallery.tsx`: the nine projects and their existing artwork.
+- `src/components/Header.tsx` and `Footer.tsx`: shared navigation and contact links.
+- `src/pages/`: Thinking, My story, résumé and complete case studies.
+- `src/components/LivingDiagram.tsx`, `ThinkingMap.tsx` and `WorkingModel.tsx`: original SVG illustrations.
+- `src/motion/`: typed animation and interaction logic. One React effect owns listeners, observers, animation frames and timers; it cleans them up on unmount.
+- `src/styles.css`: the preserved paper, rust and serif design, responsive layouts and print styles.
+- `public/assets/`: original project images and favicon.
+- `public/miffy-work-first-portfolio.html`: the untouched original portfolio.
 
-## Motion and access
+Motion respects the system’s reduced-motion preference and the reader’s switch. The homepage loop pauses off screen or when the tab is hidden. The gallery never advances automatically.
 
-The site respects the system's reduced-motion preference and the reader's Motion switch. The original fine looping SVG illustration is preserved, and pauses when out of view or when the tab is hidden. Other motion uses brief entrance gestures and supported browser page transitions. Content and route links remain accessible without JavaScript.
+## Checks and production preview
 
-Design direction: existing paper, rust and serif identity, refined with editorial composition and restrained tactile motion. Motion guidance references https://github.com/iart-ai/motion-design-skills.
+```sh
+npm run build
+npm run check
+npm run preview
+```
+
+The build prerenders every route from the same React components used in the browser. Each page contains its complete content, title and metadata before JavaScript loads. Direct links, refreshes and the original project URLs work on GitHub Pages. Native links retain browser back/forward behaviour and supported page transitions.
+
+`npm run check` verifies all 16 routes, the nine project entries, both maps and the prerendered output. TypeScript uses strict checking. A dedicated 404 page helps visitors return to the portfolio.
+
+## Publishing
+
+Commit source edits and push `main` to `MiffyLeung/miffyleung.github.io`. `.github/workflows/pages.yml` installs the locked dependencies, checks types, builds, verifies the output and publishes `dist` through GitHub Actions. Do not manually edit `dist`; it is regenerated.
+
+The repository’s Pages source is **GitHub Actions**. The prior static versions remain recoverable in Git history. No credentials are stored in this project.
+
+References: [React hydration](https://react.dev/reference/react-dom/client/hydrateRoot), [Vite deployment](https://vite.dev/guide/static-deploy.html#github-pages), [motion guidance](https://github.com/iart-ai/motion-design-skills).
