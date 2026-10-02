@@ -138,6 +138,27 @@ export function WorkNoRushBeQuick() {
                 <small>Move through station names at your pace</small>
               </div>
             </div>
+            <p>
+              In Learn mode, the Jyutping map highlights the sound parts to try
+              and lights up completed combinations. Station progress gives the
+              learner another small milestone. I wanted the map to guide the
+              next attempt and make learning feel like something they could see
+              growing.
+            </p>
+            <figure className="study-figure">
+              <img
+                src="/assets/nrbq-learn-game-keyboard-light.png"
+                alt="Light-mode Learn screen at Shek Mun, with the game keyboard below a Jyutping map. The completed sek syllable lights up s, e and k, and progress shows one of forty combinations unlocked."
+                width="639"
+                height="783"
+                loading="lazy"
+              />
+              <figcaption>
+                Learn mode with the game keyboard. After completing sek, its
+                sound parts light up on the map: guidance for the next attempt,
+                and a visible record of a small achievement.
+              </figcaption>
+            </figure>
           </section>
           <section className="study-section" id="scope">
             <p className="study-label">02 / FINDING THE MVP</p>
@@ -177,19 +198,6 @@ export function WorkNoRushBeQuick() {
               method that suited them, while I continued to work on the
               experience for people learning Jyutping.
             </p>
-            <figure className="study-figure">
-              <img
-                src="/assets/nrbq-keyboard-options.png"
-                alt="NRBQ settings showing System Keyboard, Game Keyboard and Jyutping Keyboard; Jyutping Keyboard is available in Learn mode."
-                width="1280"
-                height="800"
-                loading="lazy"
-              />
-              <figcaption>
-                The released game offers three input modes. The Jyutping
-                keyboard is available in Learn mode.
-              </figcaption>
-            </figure>
           </section>
           <section className="study-section" id="keyboard">
             <p className="study-label">04 / A KEYBOARD FOR BEGINNERS</p>
@@ -209,15 +217,16 @@ export function WorkNoRushBeQuick() {
             </p>
             <figure className="study-figure">
               <img
-                src="/assets/nrbq-jyutping-keyboard.png"
-                alt="NRBQ Learn mode at Wong Chuk Hang, with a sound map and a beginner keyboard grouped into onset, nucleus and coda."
-                width="1280"
-                height="800"
+                src="/assets/nrbq-jyutping-keyboard-light.png"
+                alt="Light-mode Jyutping keyboard grouped into onset, nucleus and coda, with d, u and ng selected to compose dung before submitting."
+                width="639"
+                height="280"
                 loading="lazy"
               />
               <figcaption>
-                Actual Learn-mode interface: reference sounds above, a station
-                to practise, and sound components to compose below.
+                A closer look at the beginner keyboard: d + u + ng forms dung
+                in three sound selections, then SPACE submits it. Available in
+                Learn mode, including its survival challenge.
               </figcaption>
             </figure>
             <div className="study-insight">
